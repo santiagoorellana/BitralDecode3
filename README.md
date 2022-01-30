@@ -1,9 +1,11 @@
-BitralDecode (Demodulation Processor):
+<H1>BitralDecode (Demodulation Processor):</H1>
 
-Introduction:
+<H3>Introduction:</H3>
 When a signal is demodulated by software, the final result can be a chain of symbols that carries within it the transmitted message, usually encrypted, and other data necessary for synchronization and error correction. When you know the encoding and protocol used by the sender and receiver, it is easy to know where the message is and what to do to retrieve it; but not so when the signal is unknown. Through the analysis of the signal, it is possible to know the type of modulation that is used and correctly demodulates the signal, but it is necessary to carry out a study of its structure. The BitralDecode tool facilitates the analysis and processing of the string of symbols resulting from the demodulation.
 
-Brief description of the tool:
+![BitralDecodePrincipal](https://user-images.githubusercontent.com/59070402/151719394-1526efa9-f36f-4aab-be5a-079b2a8a1c27.png)
+
+<H3>Brief description of the tool:</H3>
 BitralDecode is an MDI application that allows the user to work with several demodulations at the same time. The tools it uses are implemented as separate threads, thus allowing the user to continue working with the application while the tool is running.
 
 The application allows the user among other things:
@@ -14,7 +16,7 @@ The application allows the user among other things:
 - Point to files in a given folder that contain at least one occurrence of a specific string.
 - Compare two demodulations and view the result graphically, thus revealing the structures common to both.
 
-Loading and editing a demodulation.
+<H3>Loading and editing a demodulation.</H3>
 By means of a simple dialog, the user is allowed to select the file that contains the string of characters resulting from the demodulation. Once the file is loaded, the program automatically searches for the periodic repetitions of substrings that occur within the demodulation. At the end of the search, the user is presented with a list of the periodic repetitions found and a color matrix of the demodulation data. We will call this matrix the demodulation raster and it can also be shown in gray scale.
 
 Simply select one of the periods from the list so that the demodulation raster is displayed with that period. By finding the correct period, the raster reveals some interesting structures of the demodulated signal. The same can be done with demodulations of more than two symbols.
@@ -32,11 +34,17 @@ If the user wishes to edit the demodulations, he only has to activate the Text E
 
 If the user makes mistakes, you can undo the changes in order as they were made. When you are satisfied with the edit, you can save the changes to the original file or to a new one.
 
-Automatic period search.
+<H3>Automatic period search.</H3>
+
 For the advanced search of the periodic repetitions of the demodulation, a tool that implements some pattern detection algorithms can be used. Once the recurrences are detected, they are displayed in a list, ordered according to their importance.
 
-Comparison of demodulations.
+![BitralDecodeBuscaPeriodos](https://user-images.githubusercontent.com/59070402/151719661-2b4df66b-764c-448f-bc89-3f8952de4244.png)
+
+<H3>Comparison of demodulations.</H3>
+
 Other tools provided by the application are comparators. These are used to compare two demodulations, thus revealing their differences or common structures.
+
+![BitralDecodeComparaciones](https://user-images.githubusercontent.com/59070402/151719650-810e4f71-565c-4214-bd79-d06ac53ff436.png)
 
 The Diff Comparator uses an algorithm widely used in the analysis of DNA strands and other complex proteins. It uses dynamic programming concepts so it is very efficient in speed and classifies the differences according to a mathematical model of the types of possible errors (Deletions, Insertions, Replacements).
 
@@ -44,20 +52,19 @@ Another comparator is the Most, created by the authors, which looks for the grea
 
 Both comparators show their results through graphs that allow observing the similarity structures between the compared demodulations.
 
-Search for strings.
+<H3>Search for strings.</H3>
+
 We also have a chain search tool. This looks for the occurrence of a given string in all demodulation files contained in the given folder.
 
-Upcoming developments
+<H3>Upcoming developments</H3>
+
 The BitralDecode application in its version 4 will try to solve other more complex problems related to decoding and error correction.
 In addition, other internal structure comparison and disclosure tools will be included, as well as facilities to map the demodulations by sections, insert comments, marks and finally facilitate the semi-automatic creation of reports.
 
 Designer and programmer: Santago A. Orellana Pérez
+
 Email: tecnochago@gmail.com
+
 Mobile: +53 54635944
+
 Havana, Cuba, 2012
-
-
-
-
-
-
